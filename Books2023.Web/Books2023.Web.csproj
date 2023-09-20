@@ -16,4 +16,10 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.16" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Books2023.DataLayer\Books2023.DataLayer.csproj" />
+    <ProjectReference Include="..\Books2023.Models\Books2023.Models.csproj" />
+    <ProjectReference Include="..\Books2023.Utilities\Books2023.Utilities.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Books2023.Models/1.0.0": {
+        "runtime": {
+          "Books2023.Models.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Books2023.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

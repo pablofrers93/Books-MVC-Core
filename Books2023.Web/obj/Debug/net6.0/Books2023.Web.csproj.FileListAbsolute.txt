@@ -265,3 +265,9 @@ C:\Users\pablo\OneDrive\Desktop\Instituto\Programacion 3ero\Books2023\Books2023.
 C:\Users\pablo\OneDrive\Desktop\Instituto\Programacion 3ero\Books2023\Books2023.Web\bin\Debug\net6.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\pablo\OneDrive\Desktop\Instituto\Programacion 3ero\Books2023\Books2023.Web\bin\Debug\net6.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\pablo\OneDrive\Desktop\Instituto\Programacion 3ero\Books2023\Books2023.Web\bin\Debug\net6.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\pablo\OneDrive\Desktop\Instituto\Programacion 3ero\Books2023\Books2023.Web\bin\Debug\net6.0\Books2023.DataLayer.dll
+C:\Users\pablo\OneDrive\Desktop\Instituto\Programacion 3ero\Books2023\Books2023.Web\bin\Debug\net6.0\Books2023.Models.dll
+C:\Users\pablo\OneDrive\Desktop\Instituto\Programacion 3ero\Books2023\Books2023.Web\bin\Debug\net6.0\Books2023.Utilities.dll
+C:\Users\pablo\OneDrive\Desktop\Instituto\Programacion 3ero\Books2023\Books2023.Web\bin\Debug\net6.0\Books2023.DataLayer.pdb
+C:\Users\pablo\OneDrive\Desktop\Instituto\Programacion 3ero\Books2023\Books2023.Web\bin\Debug\net6.0\Books2023.Models.pdb
+C:\Users\pablo\OneDrive\Desktop\Instituto\Programacion 3ero\Books2023\Books2023.Web\bin\Debug\net6.0\Books2023.Utilities.pdb

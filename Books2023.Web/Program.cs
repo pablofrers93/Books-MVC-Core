@@ -1,4 +1,4 @@
-using Books2023.Web.Data;
+using Books2023.Models.Data;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

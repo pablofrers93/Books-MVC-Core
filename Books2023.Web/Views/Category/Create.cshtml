@@ -18,8 +18,12 @@
             <span asp-validation-for="DisplayOrder" class="text-danger"></span>
         </div>
         <div class="d-flex">
-            <button type="submit" class="btn btn-primary me-3" style="width: 200px;">Save</button>
+            <button type="submit" class="btn btn-primary me-3" style="width: 200px;">
+                <i class="bi bi-check2-square"></i> &nbsp
+                Save
+            </button>
             <a asp-controller="Category" asp-action="Index" class="btn btn-success" style="width: 200px;">
+                <i class="bi bi-skip-backward"></i> &nbsp
                 Back to List
             </a>
         </div> 

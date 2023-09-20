@@ -3884,6 +3884,41 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "Books2023.DataLayer/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Books2023.Models": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "7.0.11",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.11"
+        },
+        "compile": {
+          "bin/placeholder/Books2023.DataLayer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Books2023.DataLayer.dll": {}
+        }
+      },
+      "Books2023.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Books2023.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Books2023.Models.dll": {}
+        }
+      },
+      "Books2023.Utilities/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Books2023.Utilities.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Books2023.Utilities.dll": {}
+        }
       }
     }
   },
@@ -11098,10 +11133,28 @@
         "system.xml.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
+    },
+    "Books2023.DataLayer/1.0.0": {
+      "type": "project",
+      "path": "../Books2023.DataLayer/Books2023.DataLayer.csproj",
+      "msbuildProject": "../Books2023.DataLayer/Books2023.DataLayer.csproj"
+    },
+    "Books2023.Models/1.0.0": {
+      "type": "project",
+      "path": "../Books2023.Models/Books2023.Models.csproj",
+      "msbuildProject": "../Books2023.Models/Books2023.Models.csproj"
+    },
+    "Books2023.Utilities/1.0.0": {
+      "type": "project",
+      "path": "../Books2023.Utilities/Books2023.Utilities.csproj",
+      "msbuildProject": "../Books2023.Utilities/Books2023.Utilities.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Books2023.DataLayer >= 1.0.0",
+      "Books2023.Models >= 1.0.0",
+      "Books2023.Utilities >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 7.0.11",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.11",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.11",
@@ -11140,7 +11193,17 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\pablo\\OneDrive\\Desktop\\Instituto\\Programacion 3ero\\Books2023\\Books2023.DataLayer\\Books2023.DataLayer.csproj": {
+              "projectPath": "C:\\Users\\pablo\\OneDrive\\Desktop\\Instituto\\Programacion 3ero\\Books2023\\Books2023.DataLayer\\Books2023.DataLayer.csproj"
+            },
+            "C:\\Users\\pablo\\OneDrive\\Desktop\\Instituto\\Programacion 3ero\\Books2023\\Books2023.Models\\Books2023.Models.csproj": {
+              "projectPath": "C:\\Users\\pablo\\OneDrive\\Desktop\\Instituto\\Programacion 3ero\\Books2023\\Books2023.Models\\Books2023.Models.csproj"
+            },
+            "C:\\Users\\pablo\\OneDrive\\Desktop\\Instituto\\Programacion 3ero\\Books2023\\Books2023.Utilities\\Books2023.Utilities.csproj": {
+              "projectPath": "C:\\Users\\pablo\\OneDrive\\Desktop\\Instituto\\Programacion 3ero\\Books2023\\Books2023.Utilities\\Books2023.Utilities.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -8,6 +8,9 @@
     ".NETCoreApp,Version=v6.0": {
       "Books2023.Web/1.0.0": {
         "dependencies": {
+          "Books2023.DataLayer": "1.0.0",
+          "Books2023.Models": "1.0.0",
+          "Books2023.Utilities": "1.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.11",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.11",
           "Microsoft.EntityFrameworkCore.Tools": "7.0.11",
@@ -2637,6 +2640,26 @@
           "System.Threading": "4.3.0",
           "System.Xml.ReaderWriter": "4.3.0"
         }
+      },
+      "Books2023.DataLayer/1.0.0": {
+        "dependencies": {
+          "Books2023.Models": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "7.0.11",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.11"
+        },
+        "runtime": {
+          "Books2023.DataLayer.dll": {}
+        }
+      },
+      "Books2023.Models/1.0.0": {
+        "runtime": {
+          "Books2023.Models.dll": {}
+        }
+      },
+      "Books2023.Utilities/1.0.0": {
+        "runtime": {
+          "Books2023.Utilities.dll": {}
+        }
       }
     }
   },
@@ -4213,6 +4236,21 @@
       "sha512": "sha512-5zJ0XDxAIg8iy+t4aMnQAu0MqVbqyvfoUVl1yDV61xdo3Vth45oA2FoY4pPkxYAH5f8ixpmTqXeEIya95x0aCQ==",
       "path": "system.xml.xdocument/4.3.0",
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
+    },
+    "Books2023.DataLayer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Books2023.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Books2023.Utilities/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

@@ -1,5 +1,5 @@
-﻿using Books2023.Web.Data;
-using Books2023.Web.Models;
+﻿using Books2023.Models.Data;
+using Books2023.Models.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Books2023.Web.Controllers
@@ -36,6 +36,7 @@ namespace Books2023.Web.Controllers
             }
             _db.Categories.Add(category);
             _db.SaveChanges();
+            TempData["Success"] = "Record added succesfully";
             return RedirectToAction("Index");
         }
 
@@ -61,13 +62,19 @@ namespace Books2023.Web.Controllers
             {
                 return View(category);
             }
-            if (_db.Categories.Any(c => c.Name == category.Name && c.Id == category.Id))
+            if (_db.Categories.Any(c => c.Name == category.Name && c.Id == category.Id && category.DisplayOrder == c.DisplayOrder))
+            {
+                ModelState.AddModelError(string.Empty, "No changes");
+                return View(category);
+            }
+            if (_db.Categories.Any(c => c.Name == category.Name))
             {
                 ModelState.AddModelError(string.Empty, "Category already exists");
                 return View(category);
             }
             _db.Categories.Update(category);
             _db.SaveChanges();
+            TempData["Success"] = "Record updated succesfully";
             return RedirectToAction("Index");
         }
 
@@ -96,6 +103,7 @@ namespace Books2023.Web.Controllers
             }
             _db.Categories.Remove(category);
             _db.SaveChanges();
+            TempData["Success"] = "Record removed succesfully";
             return RedirectToAction("Index");
         }
     }

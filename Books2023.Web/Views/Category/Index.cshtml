@@ -4,23 +4,25 @@
 }
 
 <div class="conteiner">
-    <div class="row">
+    <div class="row w-75">
         <div class="col-6">
             <h2>Category List</h2>
         </div>
         <div class="col-6 text-end">
             <a asp-controller="Category" asp-action="Create" class="btn btn-primary">
+                <i class="bi bi-plus-circle"></i> &nbsp
                 New Category
             </a>
         </div>
     </div>
     <hr />
-    <table class="table table-bordered table-striped">
+
+    <table class="table table-bordered table-striped w-75">
         <thead>
             <tr>
-                <th>Category Name</th>
-                <th>Display Order</th>
-                <th>Actions</th>
+                <th style="width:50%">Category Name</th>
+                <th style="width:18%">Display Order</th>
+                <th style="width:32%">Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -31,11 +33,13 @@
                     <tr>
                         <td>@item.Name</td>
                         <td>@item.DisplayOrder</td>
-                        <td class="btn-group" role="group">
+                        <td>
                             <a class="btn btn-warning" asp-controller="Category" asp-action="Edit" asp-route-id="@item.Id">
+                                <i class="bi bi-pencil-square"></i> &nbsp
                                 Edit
                             </a>
                             <a class="btn btn-danger" asp-controller="Category" asp-action="Delete" asp-route-id="@item.Id">
+                                <i class="bi bi-trash3"></i>  &nbsp
                                 Delete
                             </a>
                         </td>
