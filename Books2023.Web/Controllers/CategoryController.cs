@@ -1,4 +1,5 @@
-﻿using Books2023.Models.Data;
+﻿using Books2023.DataLayer.Repository.Interfaces;
+using Books2023.Models.Data;
 using Books2023.Models.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -6,14 +7,14 @@ namespace Books2023.Web.Controllers
 {
     public class CategoryController : Controller
     {
-        private readonly ApplicationDbContext _db;
-        public CategoryController(ApplicationDbContext db)
+        private readonly IUnitOfWork _unitOfWork;
+        public CategoryController(IUnitOfWork unitOfWork)
         {
-            _db = db;
+            _unitOfWork = unitOfWork;
         }
         public IActionResult Index()
         {
-            var categoryList = _db.Categories.ToList();
+            var categoryList = _unitOfWork.Categories.GetAll() ;
             return View(categoryList);
         }
         [HttpGet]
@@ -29,13 +30,13 @@ namespace Books2023.Web.Controllers
             {
                 return View(category);
             }
-            if (_db.Categories.Any(c=>c.Name==category.Name))
+            if (_unitOfWork.Categories.Exists(category))
             {
                 ModelState.AddModelError(string.Empty, "Category already exists");
                 return View(category);
             }
-            _db.Categories.Add(category);
-            _db.SaveChanges();
+            _unitOfWork.Categories.Add(category);
+            _unitOfWork.Save();
             TempData["Success"] = "Record added succesfully";
             return RedirectToAction("Index");
         }
@@ -47,7 +48,7 @@ namespace Books2023.Web.Controllers
             {
                 return NotFound();
             }
-            var category = _db.Categories.FirstOrDefault(c=>c.Id==id);
+            var category = _unitOfWork.Categories.Get(c=>c.Id==id);
             if (category==null)
             {
                 return NotFound();
@@ -62,18 +63,18 @@ namespace Books2023.Web.Controllers
             {
                 return View(category);
             }
-            if (_db.Categories.Any(c => c.Name == category.Name && c.Id == category.Id && category.DisplayOrder == c.DisplayOrder))
+            if (_unitOfWork.Categories.CheckNoChanges(category))
             {
                 ModelState.AddModelError(string.Empty, "No changes");
                 return View(category);
             }
-            if (_db.Categories.Any(c => c.Name == category.Name))
+            if (_unitOfWork.Categories.Exists(category))
             {
                 ModelState.AddModelError(string.Empty, "Category already exists");
                 return View(category);
             }
-            _db.Categories.Update(category);
-            _db.SaveChanges();
+            _unitOfWork.Categories.Update(category);
+            _unitOfWork.Save();
             TempData["Success"] = "Record updated succesfully";
             return RedirectToAction("Index");
         }
@@ -85,7 +86,7 @@ namespace Books2023.Web.Controllers
             {
                 return NotFound();
             }
-            var category = _db.Categories.FirstOrDefault(c => c.Id == id);
+            var category = _unitOfWork.Categories.Get(c => c.Id == id);
             if (category == null)
             {
                 return NotFound();
@@ -96,13 +97,13 @@ namespace Books2023.Web.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Delete(int id)
         {
-            var category = _db.Categories.FirstOrDefault(c=>c.Id ==  id);
+            var category = _unitOfWork.Categories.Get(c=>c.Id ==  id);
             if (category == null)
             {
                 ModelState.AddModelError(string.Empty, "Category does not exists");
             }
-            _db.Categories.Remove(category);
-            _db.SaveChanges();
+            _unitOfWork.Categories.Delete(category);
+            _unitOfWork.Save();
             TempData["Success"] = "Record removed succesfully";
             return RedirectToAction("Index");
         }

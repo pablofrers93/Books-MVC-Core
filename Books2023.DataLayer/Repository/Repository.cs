@@ -24,13 +24,11 @@ namespace Books2023.DataLayer.Repository
         public void Add(T entity)
         {
             _dbSet.Add(entity);
-            _db.SaveChanges();
         }
 
         public void Delete(T entity)
         {
             _dbSet.Remove(entity);  
-            _db.SaveChanges();  
         }
 
         public T Get(Expression<Func<T, bool>> filter)
@@ -42,7 +40,8 @@ namespace Books2023.DataLayer.Repository
 
         public IEnumerable<T> GetAll()
         {
-            throw new NotImplementedException();
+            IEnumerable<T> query = _dbSet;
+            return query.ToList();
         }
     }
 }

@@ -640,6 +640,9 @@
         }
       },
       "Books2023.Models/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "7.0.11"
+        },
         "runtime": {
           "Books2023.Models.dll": {}
         }

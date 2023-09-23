@@ -1,3 +1,5 @@
+using Books2023.DataLayer.Repository;
+using Books2023.DataLayer.Repository.Interfaces;
 using Books2023.Models.Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -9,6 +11,8 @@ builder.Services.AddDbContext<ApplicationDbContext>(
     options=> options
     .UseSqlServer(builder.Configuration
     .GetConnectionString("DefaultConnection")));
+
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();  
 
 var app = builder.Build();
 
