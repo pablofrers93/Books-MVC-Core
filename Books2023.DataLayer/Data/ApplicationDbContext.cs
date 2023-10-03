@@ -17,8 +17,10 @@ namespace Books2023.Models.Data
                     new Category { Id = 2, Name = "Scifi", DisplayOrder = 3 },
                     new Category { Id = 3, Name = "History", DisplayOrder = 2 },
                     new Category { Id = 4, Name = "Drama", DisplayOrder = 4 }
-                );
+               );
         }
         public DbSet <Category> Categories { get; set; }
+        public DbSet<CoverType> CoverTypes { get; set; }
+        public DbSet<Product> Products { get; set; }
     }
 }
