@@ -3,7 +3,7 @@ using Books2023.DataLayer.Repository.Interfaces;
 using Books2023.Models.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Books2023.Web.Controllers
+namespace Books2023.Web.Areas.Admin.Controllers
 {
     public class CoverTypeController : Controller
     {

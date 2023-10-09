@@ -13,6 +13,18 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\pablo\\OneDrive\\Desktop\\Instituto\\Programacion 3ero\\Books2023\\Books2023.Web\\wwwroot\\images\\products\\b0f456f4-4221-4127-bdcf-791e15b9c098.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\b0f456f4-4221-4127-bdcf-791e15b9c098.jpg"
+    },
+    {
+      "Id": "C:\\Users\\pablo\\OneDrive\\Desktop\\Instituto\\Programacion 3ero\\Books2023\\Books2023.Web\\wwwroot\\images\\products\\bd466cb2-4728-4770-ad7e-ca3f38f79e8f.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\bd466cb2-4728-4770-ad7e-ca3f38f79e8f.jpg"
+    },
+    {
+      "Id": "C:\\Users\\pablo\\OneDrive\\Desktop\\Instituto\\Programacion 3ero\\Books2023\\Books2023.Web\\wwwroot\\js\\product.js",
+      "PackagePath": "staticwebassets\\js\\product.js"
+    },
+    {
       "Id": "C:\\Users\\pablo\\OneDrive\\Desktop\\Instituto\\Programacion 3ero\\Books2023\\Books2023.Web\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

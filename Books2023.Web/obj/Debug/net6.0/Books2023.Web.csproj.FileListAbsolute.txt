@@ -271,3 +271,4 @@ C:\Users\pablo\OneDrive\Desktop\Instituto\Programacion 3ero\Books2023\Books2023.
 C:\Users\pablo\OneDrive\Desktop\Instituto\Programacion 3ero\Books2023\Books2023.Web\obj\Debug\net6.0\Books2023.Web.pdb
 C:\Users\pablo\OneDrive\Desktop\Instituto\Programacion 3ero\Books2023\Books2023.Web\obj\Debug\net6.0\Books2023.Web.genruntimeconfig.cache
 C:\Users\pablo\OneDrive\Desktop\Instituto\Programacion 3ero\Books2023\Books2023.Web\obj\Debug\net6.0\ref\Books2023.Web.dll
+C:\Users\pablo\OneDrive\Desktop\Instituto\Programacion 3ero\Books2023\Books2023.Web\obj\Debug\net6.0\Books2023.Web.MvcApplicationPartsAssemblyInfo.cs

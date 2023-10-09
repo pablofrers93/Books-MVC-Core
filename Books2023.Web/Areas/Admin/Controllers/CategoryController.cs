@@ -3,7 +3,7 @@ using Books2023.Models.Data;
 using Books2023.Models.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Books2023.Web.Controllers
+namespace Books2023.Web.Areas.Admin.Controllers
 {
     public class CategoryController : Controller
     {
@@ -14,11 +14,11 @@ namespace Books2023.Web.Controllers
         }
         public IActionResult Index()
         {
-            var categoryList = _unitOfWork.Categories.GetAll() ;
+            var categoryList = _unitOfWork.Categories.GetAll();
             return View(categoryList);
         }
         [HttpGet]
-        public IActionResult Create() 
+        public IActionResult Create()
         {
             return View();
         }
@@ -26,7 +26,7 @@ namespace Books2023.Web.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Create(Category category)
         {
-            if (!ModelState.IsValid) 
+            if (!ModelState.IsValid)
             {
                 return View(category);
             }
@@ -44,17 +44,17 @@ namespace Books2023.Web.Controllers
         [HttpGet]
         public IActionResult Edit(int? id)
         {
-            if (id==null || id==0)
+            if (id == null || id == 0)
             {
                 return NotFound();
             }
-            var category = _unitOfWork.Categories.Get(c=>c.Id==id);
-            if (category==null)
+            var category = _unitOfWork.Categories.Get(c => c.Id == id);
+            if (category == null)
             {
                 return NotFound();
             }
             return View(category);
-        }   
+        }
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Edit(Category category)
@@ -97,7 +97,7 @@ namespace Books2023.Web.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Delete(int id)
         {
-            var category = _unitOfWork.Categories.Get(c=>c.Id ==  id);
+            var category = _unitOfWork.Categories.Get(c => c.Id == id);
             if (category == null)
             {
                 ModelState.AddModelError(string.Empty, "Category does not exists");

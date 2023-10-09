@@ -201,6 +201,11 @@
         scroll-behavior: smooth;
     }
 }
+/*.img-fixed-size {
+    width: 200px;*/ /* Ancho fijo */
+    /*height: 600px;*/ /* Altura fija */
+    /*object-fit: cover;*/ /* Para que la imagen se ajuste y recorte si es necesario */
+/*}*/
 
 body {
     margin: 0;
