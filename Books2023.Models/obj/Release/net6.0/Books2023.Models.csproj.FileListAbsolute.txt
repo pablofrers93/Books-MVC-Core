@@ -1,0 +1,12 @@
+C:\Users\pablo\OneDrive\Desktop\Instituto\Programacion 3ero\Books2023\Books2023.Models\bin\Release\net6.0\Books2023.Models.deps.json
+C:\Users\pablo\OneDrive\Desktop\Instituto\Programacion 3ero\Books2023\Books2023.Models\bin\Release\net6.0\Books2023.Models.dll
+C:\Users\pablo\OneDrive\Desktop\Instituto\Programacion 3ero\Books2023\Books2023.Models\bin\Release\net6.0\Books2023.Models.pdb
+C:\Users\pablo\OneDrive\Desktop\Instituto\Programacion 3ero\Books2023\Books2023.Models\obj\Release\net6.0\Books2023.Models.csproj.AssemblyReference.cache
+C:\Users\pablo\OneDrive\Desktop\Instituto\Programacion 3ero\Books2023\Books2023.Models\obj\Release\net6.0\Books2023.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pablo\OneDrive\Desktop\Instituto\Programacion 3ero\Books2023\Books2023.Models\obj\Release\net6.0\Books2023.Models.AssemblyInfoInputs.cache
+C:\Users\pablo\OneDrive\Desktop\Instituto\Programacion 3ero\Books2023\Books2023.Models\obj\Release\net6.0\Books2023.Models.AssemblyInfo.cs
+C:\Users\pablo\OneDrive\Desktop\Instituto\Programacion 3ero\Books2023\Books2023.Models\obj\Release\net6.0\Books2023.Models.csproj.CoreCompileInputs.cache
+C:\Users\pablo\OneDrive\Desktop\Instituto\Programacion 3ero\Books2023\Books2023.Models\obj\Release\net6.0\Books2023.Models.dll
+C:\Users\pablo\OneDrive\Desktop\Instituto\Programacion 3ero\Books2023\Books2023.Models\obj\Release\net6.0\refint\Books2023.Models.dll
+C:\Users\pablo\OneDrive\Desktop\Instituto\Programacion 3ero\Books2023\Books2023.Models\obj\Release\net6.0\Books2023.Models.pdb
+C:\Users\pablo\OneDrive\Desktop\Instituto\Programacion 3ero\Books2023\Books2023.Models\obj\Release\net6.0\ref\Books2023.Models.dll

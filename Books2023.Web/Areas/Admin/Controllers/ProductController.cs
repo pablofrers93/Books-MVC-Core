@@ -40,7 +40,8 @@ namespace Books2023.Web.Areas.Admin.Controllers
                      {
                          Text = c.Name,
                          Value = c.Id.ToString()
-                     })
+                     }),
+                
             };
 
             if (id == null || id == 0)
@@ -50,7 +51,17 @@ namespace Books2023.Web.Areas.Admin.Controllers
             }
             else
             {
+                var wwwRootPath = _webHostEnvironment.WebRootPath;
                 productVm.Product = _unitOfWork.Products.Get(p => p.Id == id.Value);
+                if (productVm.Product.ImageUrl != null)
+                {
+                    string oldImage = Path.Combine(wwwRootPath, productVm.Product.ImageUrl.TrimStart('\\'));
+                    if (!System.IO.File.Exists(oldImage))
+                    {
+                        var noExiste = @"\images\SinImagenDisponible.jpg";
+                        productVm.Product.ImageUrl = noExiste;
+                    }
+                }
                 return View(productVm);
 
             }
@@ -114,6 +125,7 @@ namespace Books2023.Web.Areas.Admin.Controllers
 
         }
 
+
         #region API CALL 
         [HttpGet]
         public IActionResult GetAll()
@@ -133,6 +145,40 @@ namespace Books2023.Web.Areas.Admin.Controllers
                 productsListVm.Add(productVm);
             };
             return Json(new {data=productsListVm});
+        }
+
+        [HttpDelete]
+        public IActionResult Delete (int? id)
+        {
+            if (id == null || id == 0)
+            {
+                return Json(new {success=false, message="Not Found"});
+            }
+            var productDelete = _unitOfWork.Products.Get(p=> p.Id == id);
+            if (productDelete == null) 
+            {
+                return Json(new { success = false, message = "Product Not Found" });
+            }
+            try
+            {
+                _unitOfWork.Products.Delete(productDelete);
+                _unitOfWork.Save();
+                var wwwRothPath = _webHostEnvironment.ContentRootPath;
+                if (productDelete.ImageUrl != null)
+                {
+                    var imageToDelete = Path.Combine(wwwRothPath, productDelete.ImageUrl);
+                    if (System.IO.File.Exists(imageToDelete))
+                    {
+                        System.IO.File.Delete(imageToDelete);
+                    }
+                }
+                return Json(new { success = true, message = "Product removed succesfully" });
+
+            }
+            catch (Exception ex)
+            {
+                return Json(new {success=false, message=ex.Message});   
+            }
         }
         #endregion
     }

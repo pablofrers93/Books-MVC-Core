@@ -1,45 +1,36 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model IEnumerable<Product>
+@{
+    ViewData["Title"] = "Index";
+    string ShrinkTitle(string title)
+    {
+        return title.Length > 19 ? $"{title.Substring(0, 19)}..." : title;
+    }
 }
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-lg-3 col-md-6">
+            <div class="row p-2">
+                <div class="col-12 p-1" style="border:1px solid; border-radius:3px;">
+                    <div class="card">
+                        <img src="@item.ImageUrl" width="200px" height="300px" class="card-img-top rounded" />
+                        <div class="card-body">
+                            <h5 class="card-title text-primary">@ShrinkTitle(@item.Title)</h5>
+                            <p class="card-text text-info">by @item.Author</p>
+                            <p class="card-text text-secondary">List Price:<strike><b>$@(item.ListPrice.ToString())</b></strike></p>
+                            <p class="card-text text-secondary">As Low As:<b>$@item.Price100</b></p>
+                        </div>
 
-<div class="container">
-    <h1>Bienvenido a Mi Aplicación de Libros</h1>
-    <p>Explora nuestra colección de libros:</p>
-
-    <div class="row">
-        <div class="col-md-4">
-            <div class="card card-body d-flex flex-column align-items-center">
-                <img src="/images/_visd_0000JPG02UAP.jpg" class="card-img-top img-fixed-size" alt="Libro 3">
-                <div class="card-body">
-                    <h5 class="card-title">Título del Libro 1</h5>
-                    <p class="card-text">Descripción del libro 1.</p>
-                    <a href="" class="btn btn-primary"/>Ver detalles</a>
+                    </div>
+                    <div>
+                        <a asp-action="Details" class="btn btn-secondary form-control" asp-route-id="@item.Id">
+                            Details
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="col-md-4">
-            <div class="card card-body d-flex flex-column align-items-center">
-                <img src="/images/D_NQ_NP_614318-MLA53781047303_022023-O.jpg" class="card-img-top img-fixed-size" alt="Libro 2">
-                <div class="card-body">
-                    <h5 class="card-title">Título del Libro 2</h5>
-                    <p class="card-text">Descripción del libro 2.</p>
-                    <a href="#" class="btn btn-primary">Ver detalles</a>
-                </div>
-            </div>
-        </div>
+    }
 
-        <div class="col-md-4">
-            <div class="card card-body d-flex flex-column align-items-center">
-                <img src="/images/81iqz2hhd-l._ac_uf1000,1000_ql80_.jpg" class="card-img-top img-fixed-size" alt="Libro 1">
-                <div class="card-body">
-                    <h5 class="card-title">Título del Libro 3</h5>
-                    <p class="card-text">Descripción del libro 3.</p>
-                    <a href="#" class="btn btn-primary">Ver detalles</a>
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
-
-
