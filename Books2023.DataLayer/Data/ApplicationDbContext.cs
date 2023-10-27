@@ -1,9 +1,10 @@
 ﻿using Books2023.Models.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Books2023.Models.Data
 {
-    public class ApplicationDbContext : DbContext
+    public class ApplicationDbContext: IdentityDbContext 
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext>options):base(options)
         {
@@ -12,6 +13,7 @@ namespace Books2023.Models.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Category>().HasData(
                     new Category { Id = 1, Name = "Action", DisplayOrder = 1 },
                     new Category { Id = 2, Name = "Scifi", DisplayOrder = 3 },
@@ -22,5 +24,8 @@ namespace Books2023.Models.Data
         public DbSet <Category> Categories { get; set; }
         public DbSet<CoverType> CoverTypes { get; set; }
         public DbSet<Product> Products { get; set; }
+        public DbSet<ApplicationUser> ApplicationUsers { get; set; }
+        public DbSet<Company> Companies { get; set; }
+
     }
 }

@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Books2023.Web.Areas.Admin.Controllers
 {
+    [Area("Admin")]
+
     public class ProductController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;

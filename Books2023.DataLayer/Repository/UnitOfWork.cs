@@ -1,4 +1,5 @@
-﻿using Books2023.DataLayer.Repository.Interfaces;
+﻿using Books2023.DataLayer.Migrations;
+using Books2023.DataLayer.Repository.Interfaces;
 using Books2023.Models.Data;
 using Books2023.Models.Models;
 using System;
@@ -18,10 +19,12 @@ namespace Books2023.DataLayer.Repository
             Categories = new CategoryRepository(_db);
             CoverTypes = new CoverTypeRepository(_db);
             Products = new ProductRepository(_db);
+            Companies = new CompanyRepository(_db);
         }
         public ICategoryRepository Categories { get; private set;  }
         public ICoverTypeRepository CoverTypes { get; private set; }
         public IProductRepository Products { get; private set; }
+        public ICompanyRepository Companies { get; private set; }
 
         public void Save()
         {

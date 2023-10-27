@@ -728,6 +728,7 @@ progress {
     margin-bottom: 1rem;
     font-size: 0.875em;
     color: #919aa1;
+    position: inherit;
 }
 
     .blockquote-footer::before {
@@ -4892,6 +4893,15 @@ textarea.form-control-lg {
     color: var(--bs-card-cap-color);
     background-color: var(--bs-card-cap-bg);
     border-bottom: var(--bs-card-border-width) solid var(--bs-card-border-color);
+}
+
+footer {
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
 }
 
 .card-footer {

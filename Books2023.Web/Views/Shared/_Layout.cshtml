@@ -38,9 +38,12 @@
 
                                 <li><hr class="dropdown-divider"></li>
                                 <li><a class="dropdown-item" asp-area="Admin" asp-controller="Product" asp-action="Index">Products</a></li>
+                                <li><a class="dropdown-item" asp-area="Admin" asp-controller="Company" asp-action="Index">Companies</a></li>
+
                             </ul>
                         </li>
                     </ul>
+                    <partial name="_LoginPartial" />
                 </div>
             </div>
         </nav>
@@ -52,11 +55,12 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
+    <footer>
+        <p>
             &copy; 2023 - Books2023.Web - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
+        </p>
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
