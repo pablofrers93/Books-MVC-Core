@@ -168,7 +168,7 @@ namespace Books2023.Web.Areas.Identity.Pages.Account
                 {
                     _logger.LogInformation("User created a new account with password.");
 
-                    if (Input.Role != null)
+                    if (Input.Role == null)
                     {
                         await _userManager.AddToRoleAsync(user, WC.Role_User_Individual);
                     }

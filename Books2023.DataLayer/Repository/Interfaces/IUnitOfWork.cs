@@ -12,6 +12,8 @@ namespace Books2023.DataLayer.Repository.Interfaces
         ICoverTypeRepository CoverTypes { get; }
         IProductRepository Products { get; }
         ICompanyRepository Companies { get; }
+        IShoppingCartRepository ShoppingCarts { get; }
+        IApplicationUserRepository ApplicationUsers { get; }
 
         void Save();
     }

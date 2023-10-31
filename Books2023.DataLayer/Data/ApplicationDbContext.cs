@@ -1,6 +1,7 @@
 ﻿using Books2023.Models.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection.PortableExecutable;
 
 namespace Books2023.Models.Data
 {
@@ -26,6 +27,7 @@ namespace Books2023.Models.Data
         public DbSet<Product> Products { get; set; }
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
         public DbSet<Company> Companies { get; set; }
+        public DbSet<ShoppingCart> ShoppingCarts { get; set; }
 
     }
 }
