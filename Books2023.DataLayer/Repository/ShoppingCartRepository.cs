@@ -19,5 +19,16 @@ namespace Books2023.DataLayer.Repository
             _db = db;
         }
 
-    }
+		public int DecrementQuatity(ShoppingCart cartInDb, int quantity)
+		{
+			cartInDb.Quantity -= quantity;
+			return cartInDb.Quantity;
+		}
+
+		public int IncrementQuatity(ShoppingCart cartInDb, int quantity)
+		{
+			cartInDb.Quantity += quantity;
+			return cartInDb.Quantity;
+		}
+	}
 }

@@ -48,7 +48,18 @@ namespace Books2023.Web.Areas.Customer.Controllers
             var claimsIdentity = (ClaimsIdentity)User.Identity;
             var userId = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier);
             cart.ApplicationUserId = userId.Value;
-            _unitOfWork.ShoppingCarts.Add(cart);
+
+            var cartInDb = _unitOfWork.ShoppingCarts.Get(c => c.ApplicationUserId == userId.Value
+                            && c.ProductId == cart.ProductId);
+            if (cartInDb == null)
+            {
+                _unitOfWork.ShoppingCarts.Add(cart);
+            }
+            else
+            {
+                _unitOfWork.ShoppingCarts.IncrementQuatity(cartInDb, cart.Quantity);
+            }
+
             _unitOfWork.Save();
             return RedirectToAction("Index");
         }

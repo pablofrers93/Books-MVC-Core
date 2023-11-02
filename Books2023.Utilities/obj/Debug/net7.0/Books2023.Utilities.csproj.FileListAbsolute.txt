@@ -1,11 +1,11 @@
+C:\Users\pablo\OneDrive\Desktop\Instituto\Programacion 3ero\Books2023\Books2023.Utilities\bin\Debug\net7.0\Books2023.Utilities.deps.json
+C:\Users\pablo\OneDrive\Desktop\Instituto\Programacion 3ero\Books2023\Books2023.Utilities\bin\Debug\net7.0\Books2023.Utilities.dll
+C:\Users\pablo\OneDrive\Desktop\Instituto\Programacion 3ero\Books2023\Books2023.Utilities\bin\Debug\net7.0\Books2023.Utilities.pdb
 C:\Users\pablo\OneDrive\Desktop\Instituto\Programacion 3ero\Books2023\Books2023.Utilities\obj\Debug\net7.0\Books2023.Utilities.csproj.AssemblyReference.cache
 C:\Users\pablo\OneDrive\Desktop\Instituto\Programacion 3ero\Books2023\Books2023.Utilities\obj\Debug\net7.0\Books2023.Utilities.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\pablo\OneDrive\Desktop\Instituto\Programacion 3ero\Books2023\Books2023.Utilities\obj\Debug\net7.0\Books2023.Utilities.AssemblyInfoInputs.cache
 C:\Users\pablo\OneDrive\Desktop\Instituto\Programacion 3ero\Books2023\Books2023.Utilities\obj\Debug\net7.0\Books2023.Utilities.AssemblyInfo.cs
 C:\Users\pablo\OneDrive\Desktop\Instituto\Programacion 3ero\Books2023\Books2023.Utilities\obj\Debug\net7.0\Books2023.Utilities.csproj.CoreCompileInputs.cache
-C:\Users\pablo\OneDrive\Desktop\Instituto\Programacion 3ero\Books2023\Books2023.Utilities\bin\Debug\net7.0\Books2023.Utilities.deps.json
-C:\Users\pablo\OneDrive\Desktop\Instituto\Programacion 3ero\Books2023\Books2023.Utilities\bin\Debug\net7.0\Books2023.Utilities.dll
-C:\Users\pablo\OneDrive\Desktop\Instituto\Programacion 3ero\Books2023\Books2023.Utilities\bin\Debug\net7.0\Books2023.Utilities.pdb
 C:\Users\pablo\OneDrive\Desktop\Instituto\Programacion 3ero\Books2023\Books2023.Utilities\obj\Debug\net7.0\Books2023.Utilities.dll
 C:\Users\pablo\OneDrive\Desktop\Instituto\Programacion 3ero\Books2023\Books2023.Utilities\obj\Debug\net7.0\refint\Books2023.Utilities.dll
 C:\Users\pablo\OneDrive\Desktop\Instituto\Programacion 3ero\Books2023\Books2023.Utilities\obj\Debug\net7.0\Books2023.Utilities.pdb

@@ -7,7 +7,10 @@ using System.Threading.Tasks;
 
 namespace Books2023.DataLayer.Repository.Interfaces
 {
-    public interface IShoppingCartRepository:IRepository<ShoppingCart>
-    {
-    }
+	public interface IShoppingCartRepository : IRepository<ShoppingCart>
+	{
+		int IncrementQuatity(ShoppingCart cartInDb, int quantity);
+		int DecrementQuatity(ShoppingCart cartInDb, int quantity);
+
+	}
 }

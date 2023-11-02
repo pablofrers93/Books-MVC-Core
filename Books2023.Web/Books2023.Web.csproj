@@ -36,4 +36,8 @@
     <ProjectReference Include="..\Books2023.Utilities\Books2023.Utilities.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Areas\Customer\Views\CartController\" />
+  </ItemGroup>
+
 </Project>

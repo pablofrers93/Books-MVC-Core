@@ -22,5 +22,6 @@ namespace Books2023.Models.Models
         [ForeignKey("ApplicationUserId")]
         [ValidateNever]
         public ApplicationUser ApplicationUser { get; set; }
-    }
+		public double Price { get; set; }
+	}
 }
