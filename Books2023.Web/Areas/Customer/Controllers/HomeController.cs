@@ -54,7 +54,7 @@ namespace Books2023.Web.Areas.Customer.Controllers
             if (cartInDb == null)
             {
                 _unitOfWork.ShoppingCarts.Add(cart);
-            }
+                }
             else
             {
                 _unitOfWork.ShoppingCarts.IncrementQuatity(cartInDb, cart.Quantity);
